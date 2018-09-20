@@ -61,14 +61,11 @@ public class Stack extends JFrame implements ActionListener
 		red.setBackground(Color.red);
 		green.setBackground(Color.green);
 		red.setBounds(850,50,20,50);
-		green.setBounds(850,150,20,50);
-		
+		green.setBounds(850,150,20,50);	
 		red.setBackground(Color.red);
 	}
 	public void actionPerformed(ActionEvent ae)
 	{
-		
-		
 		if(ae.getSource()==push)
 		{
 			ele=element.getText();
@@ -82,36 +79,25 @@ public class Stack extends JFrame implements ActionListener
 							Thread.sleep(2000);
 									
 						}catch(Exception e1){}
-			
-		
-				
 				return;
 			}		
-			
 			 e=Integer.parseInt(ele);
 			if(top==(SIZE-1))
 			{
-				
-				
 				JOptionPane.showMessageDialog(this,"OVERFLOW OCCURED","Error",1);
 				try{
 							Thread.sleep(2000);
 							
-						}catch(Exception e1){}
-				
-				
+						}catch(Exception e1){}	
 			}
 			else
 			{
-				
 					Thread t=new Thread(){
 						public void run(){
 								new1[++top]=new Button(""+e);						
 								int x=0,y=0;
 					new1[top].setBounds(10,100,100,30);
-					
 					work.add(new1[top]);
-				
 					for(x=10,y=10;x<650;x++)
 					{
 						try{
@@ -122,9 +108,6 @@ public class Stack extends JFrame implements ActionListener
 						new1[top].setBounds(x,y,100,30);
 						
 					}
-						
-					
-					
 					for(;y<last;y++)
 					{
 						try{
@@ -143,28 +126,20 @@ public class Stack extends JFrame implements ActionListener
 				new1[top].setBackground(Color.red);
 				element.setText("");			
 				}
-		
 				};
 					t.start();
-				
-				
-			 }  
-			 
+			 }   
 		}
 		else
 		{
 			if(top==-1)
-			{
-					
-					
-					JOptionPane.showMessageDialog(this,"UNDERFLOW OCCURED","Error",1);
-				
+			{		
+				JOptionPane.showMessageDialog(this,"UNDERFLOW OCCURED","Error",1);
 				try{
-							Thread.sleep(2000);
-											
-						}catch(Exception e1){}
-						
-					
+					Thread.sleep(2000);
+				}catch(Exception e1){
+					System.out.println("Error in sleep");
+				}
 			}
 			else
 			{
@@ -172,11 +147,8 @@ public class Stack extends JFrame implements ActionListener
 				last+=30;
 				int e=stk[top];
 				top--;
-				
-					new1[top].setBackground(Color.red);
-				
-			}
-			
+				new1[top].setBackground(Color.red);
+			}		
 		}
 		for(int i=0;i<=top;i++)
 		System.out.println("\n"+stk[i]);
@@ -192,7 +164,6 @@ public class Stack extends JFrame implements ActionListener
 				Stack s1=new Stack();
 			}	
 		});
-		//new Stack();
 	}
 }
 
