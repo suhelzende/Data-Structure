@@ -28,7 +28,6 @@ public class Queue extends JFrame implements ActionListener
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		for(int i=0;i<SIZE;i++)
 		que[i]=0;work=new JPanel();
-		//work.setBackground(new Color(85,2,155));
 		
 		element=new TextField();
 		enqueue=new JButton("ENQUEUE");
@@ -134,16 +133,6 @@ public class Queue extends JFrame implements ActionListener
 					}
 						
 					
-					
-					/*for(;y<last;y++)
-					{
-						try{
-						Thread.sleep(2);
-						}
-						catch(Exception ex){
-						}
-						new1[rr].setBounds(x,y,100,30);
-					}*/
 					last-=100;
 					que[rr]=e;
 					
